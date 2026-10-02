@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autoopt"
+version = "1.0.0"
+description = "Machine-Learning-Powered Adaptive Compiler Optimization Framework"
+readme = "README.md"
+authors = [
+    { name = "Anilove", email = "anilovejee@gmail.com" }
+]
+license = { text = "Apache-2.0" }
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Software Development :: Compilers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: C++",
+    "Programming Language :: C",
+]
+keywords = ["compiler", "llvm", "optimization", "machine-learning", "xgboost", "random-forest", "gcc", "clang"]
+dependencies = [
+    "numpy>=1.20.0",
+    "pandas>=1.3.0",
+    "scikit-learn>=1.0.0",
+    "xgboost>=1.5.0",
+    "matplotlib>=3.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "optuna>=3.0.0",
+    "shap>=0.40.0",
+]
+
+[project.scripts]
+autoopt = "autoopt.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Anilove-23/AutoOpt"
+Repository = "https://github.com/Anilove-23/AutoOpt.git"
+Issues = "https://github.com/Anilove-23/AutoOpt/issues"

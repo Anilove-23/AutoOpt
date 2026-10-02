@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+autoopt.egg-info/
+
+# C / C++ build artifacts
+*.exe
+*.o
+*.obj
+*.s
+*.bin
+*.gch
+*.dSYM/
+*.pdb
+*.ilk
+
+# Generated benchmark bulk files (can be regenerated with AutoOpt synthesizer)
+benchmarks/generated/
+benchmarks/generated_test/
+benchmarks/generated_test2/
+benchmarks/test_5000/
+
+# Temporary / Scratch data
+*.tmp
+*.log
+data/temp_test/
+results/test_eval_run.csv
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+ENV/
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

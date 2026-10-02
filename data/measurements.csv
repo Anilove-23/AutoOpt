@@ -1,0 +1,201 @@
+program,seq_id,seq_name,flags,exec_time_s,binary_size_bytes
+bubble_sort,0,O0_baseline,-O0,0.13147509999998874,41581
+bubble_sort,1,O1_basic,-O1,0.05744489999983671,41581
+bubble_sort,2,O2_standard,-O2,0.05179290000000947,41617
+bubble_sort,3,O3_aggressive,-O3,0.05364630000008219,41617
+bubble_sort,4,Os_size,-Os,0.07836919999999736,41617
+bubble_sort,5,O2_unroll_vec,-O2 -funroll-loops -ftree-vectorize,0.041733900000053836,42129
+bubble_sort,6,O2_inline_heavy,-O2 -finline-functions -finline-limit=500,0.05247460000009596,41617
+bubble_sort,7,O3_loop_opt,-O3 -funroll-loops,0.04333619999988514,42129
+bubble_sort,8,O2_no_inline,-O2 -fno-inline,0.04976899999996931,41617
+bubble_sort,9,O2_no_unroll,-O2 -fno-unroll-loops,0.052083699999911914,41617
+bubble_sort,10,O3_combine,-O3 -funroll-loops -finline-functions -ftree-vectorize,0.04339690000006158,42129
+bubble_sort,11,Os_inline,-Os -finline-functions,0.08108059999995021,41617
+bubble_sort,12,O3_no_vec,-O3 -fno-tree-vectorize,0.05282250000004751,41617
+bubble_sort,13,O2_fast_math,-O2 -ffast-math,0.05524059999993369,45843
+bubble_sort,14,O3_fast_math_vec,-O3 -ffast-math -ftree-vectorize,0.04978490000007696,45843
+bubble_sort,15,O2_ipa_pta,-O2 -fipa-pta,0.04914490000010119,41617
+bubble_sort,16,O3_no_vec2,-O3 -fno-tree-vectorize -fno-unroll-loops,0.058106599999973696,41617
+bubble_sort,17,O1_unroll,-O1 -funroll-loops,0.043775600000117265,42093
+bubble_sort,18,O2_gcse_pre,-O2 -fgcse -fpredictive-commoning,0.04998270000010052,41617
+bubble_sort,19,full_aggressive,-O3 -ffast-math -funroll-loops -finline-functions -ftree-vectorize,0.04346059999988938,46355
+fibonacci,0,O0_baseline,-O0,2.2764249000001655,41381
+fibonacci,1,O1_basic,-O1,2.076622000000043,41381
+fibonacci,2,O2_standard,-O2,1.3351339999999254,41417
+fibonacci,3,O3_aggressive,-O3,1.4821423999999297,42441
+fibonacci,4,Os_size,-Os,1.6202252999999018,41417
+fibonacci,5,O2_unroll_vec,-O2 -funroll-loops -ftree-vectorize,1.4600229999998646,41929
+fibonacci,6,O2_inline_heavy,-O2 -finline-functions -finline-limit=500,1.4810354999999618,42441
+fibonacci,7,O3_loop_opt,-O3 -funroll-loops,1.5536251999999422,42953
+fibonacci,8,O2_no_inline,-O2 -fno-inline,1.2889268999999786,41417
+fibonacci,9,O2_no_unroll,-O2 -fno-unroll-loops,1.299709600000142,41417
+fibonacci,10,O3_combine,-O3 -funroll-loops -finline-functions -ftree-vectorize,1.5010359000000335,42953
+fibonacci,11,Os_inline,-Os -finline-functions,1.6164018999998007,41417
+fibonacci,12,O3_no_vec,-O3 -fno-tree-vectorize,1.468323699999928,42441
+fibonacci,13,O2_fast_math,-O2 -ffast-math,1.3164706000000024,45643
+fibonacci,14,O3_fast_math_vec,-O3 -ffast-math -ftree-vectorize,1.4829683000000387,46667
+fibonacci,15,O2_ipa_pta,-O2 -fipa-pta,1.2980990999999449,41417
+fibonacci,16,O3_no_vec2,-O3 -fno-tree-vectorize -fno-unroll-loops,1.4723411999998461,42441
+fibonacci,17,O1_unroll,-O1 -funroll-loops,2.065012499999966,41381
+fibonacci,18,O2_gcse_pre,-O2 -fgcse -fpredictive-commoning,1.3236102000000756,41417
+fibonacci,19,full_aggressive,-O3 -ffast-math -funroll-loops -finline-functions -ftree-vectorize,1.5749018999999862,47691
+hash_table,0,O0_baseline,-O0,0.08709640000006402,42138
+hash_table,1,O1_basic,-O1,0.07966299999998228,41608
+hash_table,2,O2_standard,-O2,0.07302389999995285,42156
+hash_table,3,O3_aggressive,-O3,0.07465129999991404,42156
+hash_table,4,Os_size,-Os,0.08318980000012743,41644
+hash_table,5,O2_unroll_vec,-O2 -funroll-loops -ftree-vectorize,0.0743081999999049,42156
+hash_table,6,O2_inline_heavy,-O2 -finline-functions -finline-limit=500,0.06953080000016598,42156
+hash_table,7,O3_loop_opt,-O3 -funroll-loops,0.08832250000000386,42668
+hash_table,8,O2_no_inline,-O2 -fno-inline,0.06758400000012443,42174
+hash_table,9,O2_no_unroll,-O2 -fno-unroll-loops,0.06363149999992856,42156
+hash_table,10,O3_combine,-O3 -funroll-loops -finline-functions -ftree-vectorize,0.06992710000008628,42668
+hash_table,11,Os_inline,-Os -finline-functions,0.06189019999987977,41644
+hash_table,12,O3_no_vec,-O3 -fno-tree-vectorize,0.0719778000000133,42156
+hash_table,13,O2_fast_math,-O2 -ffast-math,0.07391619999998511,45870
+hash_table,14,O3_fast_math_vec,-O3 -ffast-math -ftree-vectorize,0.06698049999999967,46382
+hash_table,15,O2_ipa_pta,-O2 -fipa-pta,0.06469349999997576,42156
+hash_table,16,O3_no_vec2,-O3 -fno-tree-vectorize -fno-unroll-loops,0.061746999999968466,42156
+hash_table,17,O1_unroll,-O1 -funroll-loops,0.060370800000100644,42120
+hash_table,18,O2_gcse_pre,-O2 -fgcse -fpredictive-commoning,0.07099319999997533,42156
+hash_table,19,full_aggressive,-O3 -ffast-math -funroll-loops -finline-functions -ftree-vectorize,0.06605079999985719,46382
+linked_list,0,O0_baseline,-O0,0.034595500000023094,41962
+linked_list,1,O1_basic,-O1,0.03642829999989772,41962
+linked_list,2,O2_standard,-O2,0.03424329999984366,41998
+linked_list,3,O3_aggressive,-O3,0.03375359999995453,41998
+linked_list,4,Os_size,-Os,0.032447799999999916,41998
+linked_list,5,O2_unroll_vec,-O2 -funroll-loops -ftree-vectorize,0.03530460000001767,42510
+linked_list,6,O2_inline_heavy,-O2 -finline-functions -finline-limit=500,0.03401480000002266,41998
+linked_list,7,O3_loop_opt,-O3 -funroll-loops,0.03521939999995993,42510
+linked_list,8,O2_no_inline,-O2 -fno-inline,0.036289200000055644,41998
+linked_list,9,O2_no_unroll,-O2 -fno-unroll-loops,0.040240799999992305,41998
+linked_list,10,O3_combine,-O3 -funroll-loops -finline-functions -ftree-vectorize,0.0332836000000043,42510
+linked_list,11,Os_inline,-Os -finline-functions,0.03563809999991463,41998
+linked_list,12,O3_no_vec,-O3 -fno-tree-vectorize,0.03640309999991587,41998
+linked_list,13,O2_fast_math,-O2 -ffast-math,0.03511029999981474,45712
+linked_list,14,O3_fast_math_vec,-O3 -ffast-math -ftree-vectorize,0.03745939999998882,45712
+linked_list,15,O2_ipa_pta,-O2 -fipa-pta,0.038764300000138974,41998
+linked_list,16,O3_no_vec2,-O3 -fno-tree-vectorize -fno-unroll-loops,0.034516400000029535,41998
+linked_list,17,O1_unroll,-O1 -funroll-loops,0.044666300000017145,42474
+linked_list,18,O2_gcse_pre,-O2 -fgcse -fpredictive-commoning,0.036005200000090554,41998
+linked_list,19,full_aggressive,-O3 -ffast-math -funroll-loops -finline-functions -ftree-vectorize,0.03787330000000111,46736
+matrix_mult,0,O0_baseline,-O0,0.06754090000003998,41470
+matrix_mult,1,O1_basic,-O1,0.038217000000031476,41470
+matrix_mult,2,O2_standard,-O2,0.03213810000011108,41506
+matrix_mult,3,O3_aggressive,-O3,0.034704600000168284,41506
+matrix_mult,4,Os_size,-Os,0.03338209999992614,41506
+matrix_mult,5,O2_unroll_vec,-O2 -funroll-loops -ftree-vectorize,0.03304729999990741,42530
+matrix_mult,6,O2_inline_heavy,-O2 -finline-functions -finline-limit=500,0.0386682999999266,41506
+matrix_mult,7,O3_loop_opt,-O3 -funroll-loops,0.032025600000224586,43042
+matrix_mult,8,O2_no_inline,-O2 -fno-inline,0.034384799999997995,41506
+matrix_mult,9,O2_no_unroll,-O2 -fno-unroll-loops,0.03298470000004272,41506
+matrix_mult,10,O3_combine,-O3 -funroll-loops -finline-functions -ftree-vectorize,0.031060799999977462,43042
+matrix_mult,11,Os_inline,-Os -finline-functions,0.032141899999942325,41506
+matrix_mult,12,O3_no_vec,-O3 -fno-tree-vectorize,0.03175069999997504,41506
+matrix_mult,13,O2_fast_math,-O2 -ffast-math,0.0354291999999532,45732
+matrix_mult,14,O3_fast_math_vec,-O3 -ffast-math -ftree-vectorize,0.03316029999996317,45732
+matrix_mult,15,O2_ipa_pta,-O2 -fipa-pta,0.03568220000011024,41506
+matrix_mult,16,O3_no_vec2,-O3 -fno-tree-vectorize -fno-unroll-loops,0.03555359999995744,41506
+matrix_mult,17,O1_unroll,-O1 -funroll-loops,0.030623100000184422,42494
+matrix_mult,18,O2_gcse_pre,-O2 -fgcse -fpredictive-commoning,0.03656470000009904,41506
+matrix_mult,19,full_aggressive,-O3 -ffast-math -funroll-loops -finline-functions -ftree-vectorize,0.03362470000001849,46756
+quicksort,0,O0_baseline,-O0,0.10962200000017219,41608
+quicksort,1,O1_basic,-O1,0.07600810000008096,42120
+quicksort,2,O2_standard,-O2,0.07363920000011603,42156
+quicksort,3,O3_aggressive,-O3,0.07491939999999886,43180
+quicksort,4,Os_size,-Os,0.08838189999983115,41644
+quicksort,5,O2_unroll_vec,-O2 -funroll-loops -ftree-vectorize,0.0736348000000362,42668
+quicksort,6,O2_inline_heavy,-O2 -finline-functions -finline-limit=500,0.07731590000003052,43180
+quicksort,7,O3_loop_opt,-O3 -funroll-loops,0.08105070000010528,47788
+quicksort,8,O2_no_inline,-O2 -fno-inline,0.0717483999999331,42156
+quicksort,9,O2_no_unroll,-O2 -fno-unroll-loops,0.0752173999999286,42156
+quicksort,10,O3_combine,-O3 -funroll-loops -finline-functions -ftree-vectorize,0.07675890000018626,47788
+quicksort,11,Os_inline,-Os -finline-functions,0.08589370000004237,41644
+quicksort,12,O3_no_vec,-O3 -fno-tree-vectorize,0.07456870000009985,43180
+quicksort,13,O2_fast_math,-O2 -ffast-math,0.07456809999985126,45870
+quicksort,14,O3_fast_math_vec,-O3 -ffast-math -ftree-vectorize,0.07748240000000806,47406
+quicksort,15,O2_ipa_pta,-O2 -fipa-pta,0.073351300000013,42156
+quicksort,16,O3_no_vec2,-O3 -fno-tree-vectorize -fno-unroll-loops,0.07679910000001655,43180
+quicksort,17,O1_unroll,-O1 -funroll-loops,0.07474630000001525,42632
+quicksort,18,O2_gcse_pre,-O2 -fgcse -fpredictive-commoning,0.0754624999999578,42156
+quicksort,19,full_aggressive,-O3 -ffast-math -funroll-loops -finline-functions -ftree-vectorize,0.08465129999990495,51502
+sieve,0,O0_baseline,-O0,0.12127289999989443,41363
+sieve,1,O1_basic,-O1,0.06811500000003434,41363
+sieve,2,O2_standard,-O2,0.057096200000160025,41399
+sieve,3,O3_aggressive,-O3,0.060659399999849484,41399
+sieve,4,Os_size,-Os,0.052384700000175144,41399
+sieve,5,O2_unroll_vec,-O2 -funroll-loops -ftree-vectorize,0.05506979999995565,41399
+sieve,6,O2_inline_heavy,-O2 -finline-functions -finline-limit=500,0.06121819999998479,41399
+sieve,7,O3_loop_opt,-O3 -funroll-loops,0.05433460000017476,41399
+sieve,8,O2_no_inline,-O2 -fno-inline,0.07106279999993603,41399
+sieve,9,O2_no_unroll,-O2 -fno-unroll-loops,0.05574780000006285,41399
+sieve,10,O3_combine,-O3 -funroll-loops -finline-functions -ftree-vectorize,0.05565259999980299,41399
+sieve,11,Os_inline,-Os -finline-functions,0.052677199999834556,41399
+sieve,12,O3_no_vec,-O3 -fno-tree-vectorize,0.05731680000008055,41399
+sieve,13,O2_fast_math,-O2 -ffast-math,0.059666699999979755,45625
+sieve,14,O3_fast_math_vec,-O3 -ffast-math -ftree-vectorize,0.06204110000021501,45625
+sieve,15,O2_ipa_pta,-O2 -fipa-pta,0.06905009999991307,41399
+sieve,16,O3_no_vec2,-O3 -fno-tree-vectorize -fno-unroll-loops,0.05828439999982038,41399
+sieve,17,O1_unroll,-O1 -funroll-loops,0.04835089999983211,41363
+sieve,18,O2_gcse_pre,-O2 -fgcse -fpredictive-commoning,0.056665999999950145,41399
+sieve,19,full_aggressive,-O3 -ffast-math -funroll-loops -finline-functions -ftree-vectorize,0.053813400000080946,45625
+stencil2d,0,O0_baseline,-O0,0.05954139999994368,41435
+stencil2d,1,O1_basic,-O1,0.03453280000007908,41947
+stencil2d,2,O2_standard,-O2,0.03581920000010541,41983
+stencil2d,3,O3_aggressive,-O3,0.033507900000131485,42495
+stencil2d,4,Os_size,-Os,0.03330329999994319,41471
+stencil2d,5,O2_unroll_vec,-O2 -funroll-loops -ftree-vectorize,0.036623599999984435,43007
+stencil2d,6,O2_inline_heavy,-O2 -finline-functions -finline-limit=500,0.037752700000055484,41983
+stencil2d,7,O3_loop_opt,-O3 -funroll-loops,0.034015700000054494,43007
+stencil2d,8,O2_no_inline,-O2 -fno-inline,0.03558840000005148,41983
+stencil2d,9,O2_no_unroll,-O2 -fno-unroll-loops,0.03623680000009699,41983
+stencil2d,10,O3_combine,-O3 -funroll-loops -finline-functions -ftree-vectorize,0.03446880000001329,43007
+stencil2d,11,Os_inline,-Os -finline-functions,0.03646630000002915,41471
+stencil2d,12,O3_no_vec,-O3 -fno-tree-vectorize,0.035705199999938486,42495
+stencil2d,13,O2_fast_math,-O2 -ffast-math,0.03654729999993833,45697
+stencil2d,14,O3_fast_math_vec,-O3 -ffast-math -ftree-vectorize,0.03379999999992833,46209
+stencil2d,15,O2_ipa_pta,-O2 -fipa-pta,0.03525439999998525,41983
+stencil2d,16,O3_no_vec2,-O3 -fno-tree-vectorize -fno-unroll-loops,0.03386960000011641,42495
+stencil2d,17,O1_unroll,-O1 -funroll-loops,0.03358099999991282,42459
+stencil2d,18,O2_gcse_pre,-O2 -fgcse -fpredictive-commoning,0.036869700000124794,42495
+stencil2d,19,full_aggressive,-O3 -ffast-math -funroll-loops -finline-functions -ftree-vectorize,0.03185000000007676,47233
+string_ops,0,O0_baseline,-O0,0.16705339999998614,41645
+string_ops,1,O1_basic,-O1,0.15313300000002528,41645
+string_ops,2,O2_standard,-O2,0.145145900000216,42193
+string_ops,3,O3_aggressive,-O3,0.14853999999991174,42193
+string_ops,4,Os_size,-Os,0.14543109999999615,42193
+string_ops,5,O2_unroll_vec,-O2 -funroll-loops -ftree-vectorize,0.1437169000000722,42705
+string_ops,6,O2_inline_heavy,-O2 -finline-functions -finline-limit=500,0.1436540000001969,42193
+string_ops,7,O3_loop_opt,-O3 -funroll-loops,0.14404070000000502,42705
+string_ops,8,O2_no_inline,-O2 -fno-inline,0.1406731000001855,42193
+string_ops,9,O2_no_unroll,-O2 -fno-unroll-loops,0.14024130000007062,42193
+string_ops,10,O3_combine,-O3 -funroll-loops -finline-functions -ftree-vectorize,0.1423322000000553,42705
+string_ops,11,Os_inline,-Os -finline-functions,0.14645680000012362,42193
+string_ops,12,O3_no_vec,-O3 -fno-tree-vectorize,0.1386429000001499,42193
+string_ops,13,O2_fast_math,-O2 -ffast-math,0.13996589999987918,46419
+string_ops,14,O3_fast_math_vec,-O3 -ffast-math -ftree-vectorize,0.1441631000000143,46419
+string_ops,15,O2_ipa_pta,-O2 -fipa-pta,0.13983970000003865,42193
+string_ops,16,O3_no_vec2,-O3 -fno-tree-vectorize -fno-unroll-loops,0.1434939000000668,42193
+string_ops,17,O1_unroll,-O1 -funroll-loops,0.15332439999997405,42669
+string_ops,18,O2_gcse_pre,-O2 -fgcse -fpredictive-commoning,0.14182789999995293,42193
+string_ops,19,full_aggressive,-O3 -ffast-math -funroll-loops -finline-functions -ftree-vectorize,0.14012189999994007,46419
+vector_ops,0,O0_baseline,-O0,0.10600460000000567,41453
+vector_ops,1,O1_basic,-O1,0.08156579999990754,41453
+vector_ops,2,O2_standard,-O2,0.07563460000005762,41489
+vector_ops,3,O3_aggressive,-O3,0.07318270000018856,41489
+vector_ops,4,Os_size,-Os,0.08121729999993477,41489
+vector_ops,5,O2_unroll_vec,-O2 -funroll-loops -ftree-vectorize,0.07476100000008046,43025
+vector_ops,6,O2_inline_heavy,-O2 -finline-functions -finline-limit=500,0.07457759999988411,41489
+vector_ops,7,O3_loop_opt,-O3 -funroll-loops,0.08024619999991955,43025
+vector_ops,8,O2_no_inline,-O2 -fno-inline,0.0756719000000885,41489
+vector_ops,9,O2_no_unroll,-O2 -fno-unroll-loops,0.07556640000007064,41489
+vector_ops,10,O3_combine,-O3 -funroll-loops -finline-functions -ftree-vectorize,0.08098089999998592,43025
+vector_ops,11,Os_inline,-Os -finline-functions,0.07598680000000968,41489
+vector_ops,12,O3_no_vec,-O3 -fno-tree-vectorize,0.07527610000011009,41489
+vector_ops,13,O2_fast_math,-O2 -ffast-math,0.07421019999992495,45715
+vector_ops,14,O3_fast_math_vec,-O3 -ffast-math -ftree-vectorize,0.08249150000006011,45715
+vector_ops,15,O2_ipa_pta,-O2 -fipa-pta,0.07960839999987002,41489
+vector_ops,16,O3_no_vec2,-O3 -fno-tree-vectorize -fno-unroll-loops,0.07751510000002781,41489
+vector_ops,17,O1_unroll,-O1 -funroll-loops,0.0700094999999692,42477
+vector_ops,18,O2_gcse_pre,-O2 -fgcse -fpredictive-commoning,0.06830540000009933,41489
+vector_ops,19,full_aggressive,-O3 -ffast-math -funroll-loops -finline-functions -ftree-vectorize,0.07613809999998011,46739
