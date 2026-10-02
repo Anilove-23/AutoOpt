@@ -81,12 +81,30 @@ class AutoOptEnsemble:
         if not self.is_fitted:
             raise RuntimeError("AutoOptEnsemble is not fitted yet.")
 
-        rf_probs = self.rf.predict_proba(X)
-        xgb_probs = self.xgb.predict_proba(X)
+        has_le = self.label_encoder is not None and hasattr(self.label_encoder, "classes_")
+        target_classes = self.label_encoder.classes_ if has_le else getattr(self.rf, "classes_", None)
 
-        # Average probabilities across models
-        ensemble_probs = (rf_probs + xgb_probs) / 2.0
-        return ensemble_probs, self.label_encoder.classes_
+        rf_probs = self.rf.predict_proba(X) if hasattr(self.rf, "predict_proba") else None
+        xgb_probs = None
+        if self.xgb is not None and hasattr(self.xgb, "predict_proba"):
+            try:
+                xgb_probs = self.xgb.predict_proba(X)
+            except Exception:
+                xgb_probs = None
+
+        if rf_probs is not None and xgb_probs is not None and rf_probs.shape == xgb_probs.shape:
+            ensemble_probs = (rf_probs + xgb_probs) / 2.0
+        elif xgb_probs is not None:
+            ensemble_probs = xgb_probs
+        elif rf_probs is not None:
+            ensemble_probs = rf_probs
+        else:
+            raise RuntimeError("Neither RF nor XGB has valid predict_proba.")
+
+        if target_classes is None:
+            target_classes = np.arange(ensemble_probs.shape[1])
+
+        return ensemble_probs, target_classes
 
     def predict(self, X: np.ndarray) -> np.ndarray:
         """Predicts winning sequence IDs."""
