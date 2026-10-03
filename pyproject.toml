@@ -46,6 +46,10 @@ dev = [
 [project.scripts]
 autoopt = "autoopt.cli:main"
 
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["autoopt*"]
+
 [project.urls]
 Homepage = "https://github.com/Anilove-23/AutoOpt"
 Repository = "https://github.com/Anilove-23/AutoOpt.git"

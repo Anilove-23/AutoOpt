@@ -147,36 +147,57 @@ pip install -e .
 
 ## 💻 CLI Usage
 
-AutoOpt provides an intuitive command-line interface:
+AutoOpt provides an intuitive command-line interface that acts as a smart, drop-in replacement for GCC/Clang:
 
-### 1. Recommend Optimal Compiler Flags
+### 1. Compile and Run with AI-Optimal Flags
 ```bash
-# Get optimization flags for any C or C++ file
+# Analyze, predict optimal flags, compile, and execute in one step (like gcc -O3 prog.c && ./a.out)
+autoopt run src/physics_sim.cpp
+
+# Pass arguments to your compiled program
+autoopt run src/physics_sim.cpp -- --threads 4 --input data.txt
+```
+
+### 2. Compile with Adaptive AI Optimization
+```bash
+# Automatically analyze, select flags, compile, and output the binary
+autoopt compile src/physics_sim.cpp -o physics_sim
+
+# Benchmark against -O3 after building
+autoopt compile src/physics_sim.cpp --compare-o3
+```
+
+### 3. Recommend Optimal Compiler Flags
+```bash
+# Get optimization flags without compiling
 autoopt recommend src/matrix_mult.cpp
 
 # Output in JSON format for automated CI/CD build scripts
 autoopt recommend src/graph_algo.cpp --json
 ```
 
-### 2. Compile with Adaptive AI Optimization
-```bash
-# Automatically analyze, select flags, compile, and benchmark vs -O3
-autoopt compile src/physics_sim.cpp --compare-o3
-```
-
-### 3. Deep Structural & LLVM Analysis
+### 4. Deep Structural & LLVM Analysis
 ```bash
 # Inspect CFG, loops, memory access patterns, and instruction mix
 autoopt analyze src/bubble_sort.c
 ```
 
-### 4. Benchmark All Sequences
+### 5. Benchmark All Sequences
 ```bash
 # Empirically test all candidate compiler passes on a file
 autoopt benchmark src/stencil.cpp
+
+# List all available optimization sequences
+autoopt sequences
 ```
 
-### 5. Procedurally Synthesize Benchmark Kernels
+### 6. Scaffold a New Project
+```bash
+# Generate a new AutoOpt-ready C++ project with Makefile
+autoopt init my_project --lang cpp
+```
+
+### 7. Procedurally Synthesize Benchmark Kernels
 ```bash
 # Generate 500 unique synthetic programs across memory/loop/CFG patterns
 autoopt synthesize --count 500 --out benchmarks/generated_suite
